@@ -62,6 +62,8 @@ func (s *simpleServer) IsAlive() bool {
 
 }
 
+//Adinng some random commentss in version1.1
+
 func (s *simpleServer) Serve(rw http.ResponseWriter, req *http.Request) {
 	s.proxy.ServeHTTP(rw, req)
 
@@ -77,6 +79,8 @@ func (lb *LoadBalancer) getNextAvailableServer() Server {
 	return server
 
 }
+
+//This is a serverproxy
 
 func (lb *LoadBalancer) serverProxy(rw http.ResponseWriter, req *http.Request) {
 	targetServer := lb.getNextAvailableServer()
